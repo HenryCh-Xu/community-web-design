@@ -1,0 +1,34 @@
+{% extends "webpages/base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+{% block content %}
+	<p>项目名: {{ L_F_T }}</p>
+	<p>内容:</p>
+	<p>
+		<a href="{% url 'webpages:LFT_new_entry' L_F_T.id %}">添加新内容</a>
+	</p>
+
+	<ul>
+		{% for L_F_T_entry in L_F_T_entries %}
+			<li>
+				<p>{{ L_F_T_entry.L_F_T_date|date:'M d, Y H:i' }}</p>
+				<p>{{ L_F_T_entry.text|linebreaks }}</p>
+				<p>
+					<a href="{% url 'webpages:LFT_edit_entry' L_F_T_entry.id %}">编辑内容</a>
+				</p>
+			</li>
+		{% empty %}
+			<li>
+				没有任何内容
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock content %}
+
+</body>
+</html>

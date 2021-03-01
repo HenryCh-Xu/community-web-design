@@ -1,0 +1,14 @@
+{% extends "webpages/base.html" %}
+{% block content %}
+<p>Topic</p>
+	<ul>
+		{% for E_T in electronics %}
+			<li>
+        		<a href="{% url 'webpages:electronics_topic' E_T.id %}">{{ E_T }}</a>
+			</li>
+		{% empty %}
+			<li>没有任何主题</li>
+		{% endfor %}
+	</ul>
+	<a href="{% url 'webpages:ET_new_topic' %}">添加新主题:</a>
+{% endblock content %}

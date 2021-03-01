@@ -1,0 +1,10 @@
+{% extends "webpages/base.html" %}
+{% block content %}
+	<p><a href="{% url 'webpages:electronics_topic' E_T.id %}">{{ E_T }}</a></p>
+	<p>编辑:</p>
+	<form action="{% url 'webpages:ET_edit_entry' E_E.id %}" method='post'>
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button name="submit">保存</button>
+	</form>
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% load bootstrap4 %}
+
+{% block content %}
+	
+<!DOCTYPE>
+
+<html>
+	<head>
+		<title>欢迎来到...</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../../../static/style/homepage.css">
+		<link rel="stylesheet" type="text/css" href="../../../static/style/searchlabel.css">
+		{% bootstrap_css %}
+
+	</head>
+	<body>
+<div class="header">
+	<nav class="navbar navbar-expand-md navbar-light">
+		<a class="navbar-brand" href="{% url 'web_v:index' %}">首页</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			  data-target="#navbarCollapse" aria-controls="navbarCollapse" 
+			  aria-expanded="false" aria-label="Toggle navigation" >
+		<span class="navbar-toggler-icon"></span></button>
+			<dic class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'web_v:classification' %}">分类</a></li>
+				</ul>
+				<ul class="navbar-nav mr-auto">
+        				<input type="text" class="search" placeholder="搜索">
+        		</ul>
+				/////
+				////
+
+				</dic>
+			</nav>
+</div>
+
+<div class="row no-gutters">
+  <div class="column side">
+  </div>
+  
+  <div class="column middle">
+    <h2>主区域内容</h2>
+    <p>welcome</p>
+  </div>
+  
+  <div class="column side">
+  	
+  </div>
+</div>
+<div class="footer">
+  	<p>底部区域</p>
+</div>
+	</body>
+</html>
+{% endblock content %}

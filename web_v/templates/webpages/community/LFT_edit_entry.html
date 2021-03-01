@@ -1,0 +1,10 @@
+{% extends "webpages/base.html" %}
+{% block content %}
+	<p><a href="{% url 'webpages:lost_find_topic' L_F_T.id %}">{{ L_F_T }}</a></p>
+	<p>编辑:</p>
+	<form action="{% url 'webpages:LFT_edit_entry' L_F_E.id %}" method='post'>
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button name="submit">保存</button>
+	</form>
+{% endblock content %}

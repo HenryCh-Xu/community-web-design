@@ -1,0 +1,14 @@
+{% extends "webpages/base.html" %}
+{% block content %}
+<p>Topic</p>
+	<ul>
+		{% for L_F_T in L_F %}
+			<li>
+        		<a href="{% url 'webpages:lost_find_topic' L_F_T.id %}">{{ L_F_T }}</a>
+			</li>
+		{% empty %}
+			<li>没有任何主题</li>
+		{% endfor %}
+	</ul>
+	<a href="{% url 'webpages:LFT_new_topic' %}">添加新主题:</a>
+{% endblock content %}

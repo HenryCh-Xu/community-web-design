@@ -1,0 +1,10 @@
+{% extends "webpages/base.html" %}
+{% block content %}
+	<p><a href="{% url 'webpages:lost_find_topic' L_F_T.id %}">{{ L_F_T }}</a></p>
+	<p>添加新内容:</p>
+	<form action="{% url 'webpages:LFT_new_entry' L_F_T.id %}" method='post'>
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button name='submit'>添加</button>
+	</form>
+{% endblock content %}

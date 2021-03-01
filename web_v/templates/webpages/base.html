@@ -1,0 +1,37 @@
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/static/style/homepage.css/">
+		<link rel="stylesheet" type="text/css" href="/static/style/searchlabel.css/">
+		{% bootstrap_css %}
+	</head>
+	<body>
+			<nav class="navbar navbar-expand-md navbar-light">
+			<a class="navbar-brand" href="{% url 'webpages:index' %}">首页</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			  data-target="#navbarCollapse" aria-controls="navbarCollapse" 
+			  aria-expanded="false" aria-label="Toggle navigation" >
+			  <span class="navbar-toggler-icon"></span></button>
+				<dic class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'webpages:classification' %}">分类</a></li>
+					</ul>
+					<ul class="navbar-nav mr-auto">
+        				<input type="text" class="search" placeholder="搜索">
+        			</ul>
+				</dic>
+			</nav>
+		<main role="main">
+				{% block content %}{% endblock content %}
+				<div class="footer">
+  					<p>底部区域</p>
+				</div>
+		</main>
+	</body>
+</html>

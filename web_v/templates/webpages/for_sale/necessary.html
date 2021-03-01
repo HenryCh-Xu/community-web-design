@@ -1,0 +1,14 @@
+{% extends "webpages/base.html" %}
+{% block content %}
+<p>Topic</p>
+	<ul>
+		{% for N_T in necessary %}
+			<li>
+        		<a href="{% url 'webpages:necessary_topic' N_T.id %}">{{ N_T }}</a>
+			</li>
+		{% empty %}
+			<li>没有任何主题</li>
+		{% endfor %}
+	</ul>
+	<a href="{% url 'webpages:NT_new_topic' %}">添加新主题:</a>
+{% endblock content %}

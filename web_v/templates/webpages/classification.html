@@ -1,0 +1,91 @@
+{% extends "webpages/base.html" %}
+
+{% block content %}
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../../static/style/classification.css">
+
+	</head>
+	<body>
+		<div class="header">
+			<h1>welcome</h1>
+		</div>
+		<div class="row no-gutters">
+			<div class="column2 side2">
+	
+			</div>
+			<div class="column2 middle2">
+				<div class="title-line">
+					<span class="tit" style="font-size: 35px;">分类</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="row no-gutters">
+			<div class="T_col">
+				<div class="Topics">
+					<div class="Topic">
+						<div class="title" onclick="window.location.href= 'community/';return false">
+							<span style="margin: 0 auto;">社区</span>
+						</div>
+						<div class="title-border"></div>
+						<div class="topics">
+							<div class="topic" onclick="window.location.href= 'community/lost_find/';return false">
+								<span>失物招领</span>
+							</div>
+							<div class="topic">
+								<span>论坛</span>
+							</div>
+							<div class="topic">
+								<span>a</span>
+							</div>
+							<div class="topic">
+								<span>b</span>
+							</div>
+							<div class="topic">
+								<span>c</span>
+							</div>
+							<div class="topic">
+								<span>d</span>
+							</div>
+							<div class="topic">
+								<span>e</span>
+							</div>
+						</div>
+					</div>
+					<div class="Topic">
+						<div class="title" onclick="window.location.href= 'for_sale/';return false">
+							<span style="margin: 0 auto;">售卖</span>
+						</div>
+						<div class="title-border"></div>
+						<div class="topics">
+							<div class="topic" onclick="window.location.href='for_sale/electronics/';return false">
+								<span>电子产品</span>
+							</div>
+							<div class="topic" onclick="window.location.href='for_sale/necessary/';return false">
+								<span>日用品</span>
+							</div>
+						</div>
+					</div>
+					<div class="Topic">
+						<div class="title" onclick="window.location.href= 'studying/';return false">
+							<span style="margin: 0 auto;">学习</span>
+						</div>
+						<div class="title-border"></div>
+					</div>
+					<div class="Topic">
+						<div class="title" onclick="window.location.href= 'school/';return false">
+							<span style="margin: 0 auto;">学校</span>
+						</div>
+						<div class="title-border"></div>
+					</div>
+				</div>
+			</div>
+				<!-- -->
+				<!-- -->
+
+		</div>
+	</body>
+</html>
+
+{% endblock content %}
